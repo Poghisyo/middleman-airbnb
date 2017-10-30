@@ -1,0 +1,18 @@
+paris:
+  location: PARIS, FRANCE
+  name: Sebastien's
+  description: Charming room in Montmartre
+  link: Ssaunier
+tokyo:
+  location: TOKYO, JAPAN
+  name: Boris'
+  description: Small flat in Tokyo
+  link: Papillard
+london:
+  location: LONDON, UK
+  name: Romain's
+  description: Nice flat in Piccadilly
+  link: Monsieurpaillard
+
+
+
