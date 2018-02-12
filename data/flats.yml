@@ -1,0 +1,57 @@
+ssaunier:
+  name: "Sebastien's home"
+  description: "Charming room in Montmartre"
+  city_name: "Paris, France"
+  city_slug: "paris"
+  rating: 4
+  amenities:
+    wifi:
+      label: "Wifi"
+      icon: '<i class="fa fa-wifi"></i>'
+      state: false
+    tv:
+      label: "Tv"
+      icon: '<i class="fa fa-desktop"></i>'
+      state: true
+    kitchen:
+      label: "Kitchen"
+      icon: '<i class="fa fa-cutlery"></i>'
+      state: true
+papillard:
+  name: "Boris' home"
+  description: Small flat in Tokyo
+  city_name: "Paris, France"
+  city_slug: "tokyo"
+  amenities:
+    wifi:
+      label: "Wifi"
+      icon: '<i class="fa fa-wifi"></i>'
+      state: true
+    tv:
+      label: "Tv"
+      icon: '<i class="fa fa-desktop"></i>'
+      state: false
+    kitchen:
+      label: "Kitchen"
+      icon: '<i class="fa fa-cutlery"></i>'
+      state: true
+  rating: 3
+monsieurpaillard:
+  name: Romain's home
+  description: Nice flat in Piccadilly
+  city_name: "London, UK"
+  city_slug: "london"
+  amenities:
+    wifi:
+      label: "Wifi"
+      icon: '<i class="fa fa-wifi"></i>'
+      state: false
+    tv:
+      label: "Tv"
+      icon: '<i class="fa fa-desktop"></i>'
+      state: true
+    kitchen:
+      label: "Kitchen"
+      icon: '<i class="fa fa-cutlery"></i>'
+      state: true
+  rating: 5

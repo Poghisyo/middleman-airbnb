@@ -1,14 +1,14 @@
-<div class="container text-center padded">
+<div class="container text-center">
   <div class="cards-container">
   <h2>Recent trips</h2>
   <div class="row">
 
 
-    <% data.cities.each do |city, infos|  %>
+    <% data.flats.each do |user, infos|  %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/<%= city %>');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/<%= infos.city_slug %>');">
           <div class="card-category">
-            <%= infos.location %>
+            <%= infos.city_name %>
           </div>
           <div class="card-description">
             <h2>
@@ -18,8 +18,10 @@
               <%= infos.description %>
             </p>
           </div>
-          <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/<%= infos.link.downcase %>">
-          <a class="card-link" href="#" ></a>
+          <% user_name = user %>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{user_name}", class: "card-user" %>
+          <%= link_to '', "flats/#{user_name}", class: "card-link" %>
+          <!-- <a class="card-link" href="#" ></a> -->
         </div>
       </div>
     <% end %>

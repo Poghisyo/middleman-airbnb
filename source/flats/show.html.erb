@@ -1,0 +1,136 @@
+<% flat = data.flats[owner] %>
+
+
+<% star_on = '<a href= "#"><i class="fa fa-star star-on" ></i></a>' %>
+<% star_off = '<a href= "#"><i class="fa fa-star star-off" ></i></a>' %>
+
+
+<!-- Inject flat data in template -->
+<% city = flat.city_slug %>
+<div class="banner" style = "background-image: url('https://kitt.lewagon.com/placeholder/cities/<%= city %>');">
+</div>
+
+<div class="flat-booking">
+  <div class="container">
+    <div class="row">
+      <!-- <div class="card-form"> -->
+
+        <div class="owner-info col-xs-12 col-sm-6">
+          <div class="owner-tag">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle" %>
+            <%= owner %>
+          </div>
+          <div class="flat-info">
+            <p>
+              <%= flat.description %>
+            </p>
+            <p>
+              <%= flat.city_name %>
+            </p>
+            <p>
+              <% flat.rating.times do%>
+              <%= star_on%>
+              <% end %>
+              <% (5 - flat.rating).times do%>
+              <%= star_off%>
+              <% end %>
+
+            </p>
+          </div>
+        </div>
+
+
+        <div class="form-container text-left col-xs-12 col-sm-4 col-sm-offset-1">
+          <form action="#">
+            <h4>Book this flat</h4>
+
+            <div class="row">
+              <div class="col-xs-12 col-sm-6">
+                <input type="text" class="form-control" id="checkin" placeholder="checkin">
+              </div>
+              <div class="col-xs-12 col-sm-6">
+                <input type="text" class="form-control" id="checkout" placeholder="checkout">
+              </div>
+            </div>
+
+            <div class= "my-row">
+              <select class= "form-control" id="guests">
+                <option >1 Person</option>
+                <option >2 People</option>
+                <option >3 People</option>
+              </select>
+            </div>
+
+            <div class= "my-row">
+              <input type="submit" class="btn btn-primary" value="Book Now" style= "width: 100%">
+            </div>
+          </form>
+        </div>
+
+        <!-- </div> -->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flat-details">
+
+
+
+
+  <div class="container">
+    <div class="row">
+
+      <h4>About this flat</h4>
+      <p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit delectus nostrum dignissimos error officiis ullam odio sapiente omnis velit. Eum maxime fugit quibusdam aspernatur eaque quos enim nesciunt ea a.</p>
+    </div>
+    <div class="details-container">
+      <div class="details space">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            The space
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            accomodates, bathrooms ...
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            beds, room type ...
+          </div>
+        </div>
+      </div>
+
+      <div class="details amenities">
+        <div class="row">
+          <div class="col-xs-12 col-sm-2">
+            <p>Amenities</p>
+          </div>
+          <div class="col-xs-12 col-sm-10">
+            <% flat.amenities.each do |amenity| %>
+            <div class="col-xs-12 col-sm-5">
+              <% if amenity[1].state do %>
+              <p><%= amenity[1].icon %><%= amenity[1].label %></p>
+              <% end %>
+              <% end %>
+
+
+            </div>
+            <% end %>
+
+          </div>
+          <!-- <div class="col-xs-12 col-sm-4">
+            tv, welcome drink ...
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+</div>
+<!-- </div> -->
+
